@@ -12,7 +12,7 @@
 ## 插入图片
 举例
 ```
-![avatar](https://aliyun-lc-upload.oss-cn-hangzhou.aliyuncs.com/aliyun-lc-upload/uploads/2018/07/25/question_11.jpg) 
+![avatar](https://www.google.com/avatar-1.jpg) 
 ```
 效果
 ![avatar](https://aliyun-lc-upload.oss-cn-hangzhou.aliyuncs.com/aliyun-lc-upload/uploads/2018/07/25/question_11.jpg) 
