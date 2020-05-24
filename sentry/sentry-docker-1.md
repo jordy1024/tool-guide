@@ -20,7 +20,7 @@ issues in real-time. Here we cover everything about the product, the    platform
 
 
 ## Sentry的原理
-- 在Sentry后台注册相关账号并使用关联Dns-key。（该key是关联应用和后台平台的桥梁）  
+- 在Sentry后台注册相关账号并使用关联Dsn-key。（该key是关联应用和后台平台的桥梁）  
 - 在我们的应用中潜入对应语言的SDK埋点，并关联上述key；    
   简单到仅用一个init方法就可以搞定。 
 - 捕获异常并埋点，将异常信息第一时间推送至后台平台。  
@@ -146,7 +146,7 @@ import (
 func main() {
     err := sentry.Init(sentry.ClientOptions{
         // Either set your DSN here or set the SENTRY_DSN environment variable.
-        Dsn: "https://079843729765443f982ef8f3aea18766@o396662.ingest.sentry.io/5250281",
+        Dsn: "https://xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx@xxxxxxx.ingest.sentry.io/xxxxxxx",//这里需要替换为您自己的Dsn
         // Enable printing of SDK debug messages.
         // Useful when getting started or trying to figure something out.
         Debug: true,
