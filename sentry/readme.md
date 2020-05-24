@@ -4,7 +4,7 @@
 
 
 详情请参考以下文档   
-- sentry-docker-1.md     
+- [sentry-docker-1.md](https://github.com/jordy1024/tool-guide/blob/master/sentry/sentry-docker-1.md)     
 ```
 用多个Docker镜像分步骤正常等安装与搭建sentry平台。  
 ```
