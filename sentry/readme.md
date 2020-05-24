@@ -13,3 +13,8 @@
 ```
 用Docker Compose快速等搭建sentry平台。
 ```
+
+- 更多详情也可访问如下链接 
+[【应用异常监控利器Sentry搭建与学习笔记】](https://xie.infoq.cn/article/b45618c67983506eaad174949) 
+
+
