@@ -9,8 +9,7 @@ issues in real-time. Here we cover everything about the product, the    platform
 在这里，我们涵盖了有关产品，平台集成和自托管Sentry的所有内容。
 
 【通俗讲的讲】
-我们可以使用Sentry平台实时地监控我们的应用或服务、并且可以收集相关运行时错误或异常日志信息，在第一时间将错误信息推送至我们的】后台或邮件组等。  
-这样不仅能主动帮我们第一时间发现线上问题、而且很好的保留了异常发生时的“现场”，更有助于我们快速定位问题根源，提高解决问题的效率，逐步提高产品的稳定性和用户体验。        
+我们可以使用Sentry平台实时地监控我们的应用或服务、并且可以收集相关运行时错误或异常日志信息，   在第一时间将错误信息推送至我们的后台或邮件组等。这样不仅能主动帮我们第一时间发现线上问题，   而且很好的保留了异常发生时的“现场”，更有助于我们快速定位问题根源，提高解决问题的效率，    逐步提高产品的稳定性和用户体验。        
 ```
 
 ## 官网及文档
@@ -21,7 +20,7 @@ issues in real-time. Here we cover everything about the product, the    platform
 
 
 ## Sentry的原理
-- 在Sentry后台注册相关Key。（该key是关联应用和后台平台的桥梁）  
+- 在Sentry后台注册相关账号并使用关联Dns-key。（该key是关联应用和后台平台的桥梁）  
 - 在我们的应用中潜入对应语言的SDK埋点，并关联上述key；    
   简单到仅用一个init方法就可以搞定。 
 - 捕获异常并埋点，将异常信息第一时间推送至后台平台。  
@@ -164,12 +163,6 @@ func main() {
 ```
 效果如下   
 ![avatar](https://github.com/jordy1024/tool-guide/blob/master/sentry/images/cloud-admin-go-test.png?raw=true)  
-
-
-
-
-
-
 
 
 
