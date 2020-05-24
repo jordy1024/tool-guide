@@ -9,7 +9,9 @@ issues in real-time. Here we cover everything about the product, the    platform
 在这里，我们涵盖了有关产品，平台集成和自托管Sentry的所有内容。
 
 【通俗讲的讲】
-我们可以使用Sentry平台实时地监控我们的应用或服务、并且可以收集相关运行时错误或异常日志信息，   在第一时间将错误信息推送至我们的后台或邮件组等。这样不仅能主动帮我们第一时间发现线上问题，   而且很好的保留了异常发生时的“现场”，更有助于我们快速定位问题根源，提高解决问题的效率，    逐步提高产品的稳定性和用户体验。        
+我们可以使用Sentry平台实时地监控我们的应用或服务、并且可以收集相关运行时错误或异常日志信息，    
+在第一时间将错误信息推送至我们的后台或邮件组等。这样不仅能主动帮我们第一时间发现线上问题，   
+而且很好的保留了异常发生时的“现场”，更有助于我们快速定位问题根源，提高解决问题的效率，逐步提高产品的稳定性和用户体验。            
 ```
 
 ## 官网及文档
@@ -127,7 +129,38 @@ go run go-sentry-test.go
 
 ![avatar](https://github.com/jordy1024/tool-guide/blob/master/sentry/images/sentry-issues-upload.png?raw=true)
 
+- 并且还支持直接潜入到web框架，如以fasthttp为例：
+```
+import (
+	"fmt"
+	"net/http"
 
+	"github.com/getsentry/sentry-go"
+	sentryfasthttp "github.com/getsentry/sentry-go/fasthttp"
+)
+
+// To initialize Sentry's handler, you need to initialize Sentry itself beforehand
+if err := sentry.Init(sentry.ClientOptions{
+	Dsn: "https://079843729765443f982ef8f3aea18766@o396662.ingest.sentry.io/5250281",
+}); err != nil {
+	fmt.Printf("Sentry initialization failed: %v\n", err)
+}
+
+// Create an instance of sentryfasthttp
+sentryHandler := sentryfasthttp.New(sentryfasthttp.Options{})
+
+// After creating the instance, you can attach the handler as one of your middleware
+fastHTTPHandler := sentryHandler.Handle(func(ctx *fasthttp.RequestCtx) {
+	panic("y tho")
+})
+
+fmt.Println("Listening and serving HTTP on :3000")
+
+// And run it
+if err := fasthttp.ListenAndServe(":3000", fastHTTPHandler); err != nil {
+	panic(err)
+}
+```
 
 上述是自己搭建了sentry
 如果仅是为了学习或测试一下，可以直接在官方的后台
