@@ -24,3 +24,23 @@ x<sub>2</sub>
 效果
 ![avatar](https://aliyun-lc-upload.oss-cn-hangzhou.aliyuncs.com/aliyun-lc-upload/uploads/2018/07/25/question_11.jpg) 
 
+
+## 代码折叠
+
+举例  
+```
+<details>
+<summary>点击展开</summary>
+
+<pre><code>
+</code></pre>
+</details>
+```
+效果    
+<details>
+<summary>点击展开</summary>
+
+<pre><code>
+</code></pre>
+</details>
+
