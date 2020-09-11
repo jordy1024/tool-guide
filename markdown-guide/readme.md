@@ -31,8 +31,8 @@ x<sub>2</sub>
 ```
 <details>
 <summary>点击展开</summary>
-
 <pre><code>
+
 package main
 
 import "fmt"
@@ -40,6 +40,7 @@ import "fmt"
 func main() { 
     fmt.Println("hello world!")
 }
+
 </code></pre>
 </details>
 ```
